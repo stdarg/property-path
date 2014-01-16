@@ -1,0 +1,36 @@
+{
+  "name": "property-path",
+  "version": "0.0.3",
+  "description": "Get and set object properties by path where you can specify the separator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter list ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdarg/property-path.git"
+  },
+  "keywords": [
+    "object",
+    "property",
+    "obj",
+    "properties",
+    "path",
+    "get",
+    "set",
+    "paths",
+    "separator"
+  ],
+  "author": "Edmond Meinfelder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stdarg/property-path/issues"
+  },
+  "homepage": "https://github.com/stdarg/property-path",
+  "dependencies": {
+    "is2": "0.0.11"
+  },
+  "devDependencies": {
+    "mocha": "1.17.0"
+  }
+}
