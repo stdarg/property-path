@@ -1,6 +1,6 @@
 /**
  * @fileOverview
- * Get an a set a properties by a path with optional separator character.
+ * Get and set a properties by a path with optional separator character.
  */
 'use strict';
 
