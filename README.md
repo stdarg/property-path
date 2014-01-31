@@ -20,15 +20,17 @@ Get an set object properties by path where you can specify the separator.
 
     console.log(propPath.get(testObj, 'a'));
     console.log(propPath.get(testObj, 'b'));
+    console.log(propPath.get(testObj, 'c.d.e'));
     console.log(propPath.get(testObj, 'c/d/e', '/'));
 
-    propPath.set(testObj, 'c/d/f/0', 333, '/');
+    propPath.set(testObj, 'c.d.f.0', 333);
     console.log(testObj.c.d.f[0]);
 
 The above code results in the following output:
 
     1
     true
+    Hello
     Hello
     333
 
@@ -55,9 +57,8 @@ or false if no such value can be found.
 
 ### set(obj, path, value, [sep])
 
-Given an object and a &#39;/&#39; separated path, return the value at the path
+Given an object and a char-separated path, return the value at the path
 or false if no such value can be found.
- FIXME: If you try to set a value that does not exist, it silently fails
 
 #### Params: 
 
@@ -69,6 +70,28 @@ or false if no such value can be found.
 #### Return:
 
 * **Undefined|Any** returns the value set, if the property is found or undefined otherwise.
+
+### remove(obj, path, [sep])
+Delete the property at path on obj.
+
+* **Object** *obj* An object upon which to apply the path.
+* **String** *path* The path to traverse the object, e.g &#39;a.b.c&#39;
+* **String** *[sep]* The separator char to delimit the properties in the path. Optional. If not specified, &#39;.&#39; is assumed.
+
+#### Return:
+
+* **Boolean** returns the value set, if the property is found or undefined otherwise.
+
+### setSepChar(chr)
+Set the default separator character. If not specified, '.' is used, however, you
+may set the default to whatever you want.
+
+* **String** *[sep]* chr The default separator char to delimit the properties in the path.
+
+#### Return:
+
+* **Boolean** true if set and false otherwise.
+
 
 ## License
 The MIT License (MIT)
