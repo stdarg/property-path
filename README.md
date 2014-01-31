@@ -1,7 +1,8 @@
 property-path
 =============
 
-Get an set object properties by path where you can specify the separator.
+Get and set object properties by a string path, where you can specify the
+separator.
 
 ## Example
 

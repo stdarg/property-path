@@ -1,6 +1,6 @@
 {
   "name": "property-path",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Get and set object properties by path where you can specify the separator.",
   "main": "index.js",
   "scripts": {
