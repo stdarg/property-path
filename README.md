@@ -84,10 +84,10 @@ Delete the property at path on obj.
 * **Boolean** returns the value set, if the property is found or undefined otherwise.
 
 ### setSepChar(chr)
-Set the default separator character. If not specified, '.' is used, however, you
-may set the default to whatever you want.
+Set the default separator character. Normally, when not specified, '.' is used,
+however, you may set the default to whatever you want.
 
-* **String** *[sep]* chr The default separator char to delimit the properties in the path.
+* **String** *chr* The new default separator char to delimit the properties in the path.
 
 #### Return:
 
