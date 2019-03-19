@@ -14,7 +14,7 @@ module.exports = {
 };
 
 var is = require('is2');
-var _ = require('lodash');
+var filter = require('lodash.filter');
 var defaultSepChar = '.';       // global separator character, default is '.'
 
 /**
@@ -43,7 +43,7 @@ function getChild(path, sep) {
     if (!is.nonEmptyStr(sep))  sep = defaultSepChar;
 
     // create new path and remove leading and trailing sep chars
-    var pathParts = _.filter(path.split(sep), function(elem) {
+    var pathParts = filter(path.split(sep), function(elem) {
         return is.str(elem) && elem.length;
     });
 
@@ -64,7 +64,7 @@ function getParentPath(path, sep) {
     if (!is.nonEmptyStr(sep))  sep = defaultSepChar;
 
     // create new path and remove leading and trailing sep chars
-    var properties = _.filter(path.split(sep), function(elem) {
+    var properties = filter(path.split(sep), function(elem) {
         return is.str(elem) && elem.length;
     });
 
@@ -92,7 +92,7 @@ function get(obj, path, sep) {
     if (!is.nonEmptyStr(sep))  sep = defaultSepChar;
 
     // create new path and remove leading and trailing sep chars
-    var properties = _.filter(path.split(sep), function(elem) {
+    var properties = filter(path.split(sep), function(elem) {
         return is.str(elem) && elem.length;
     });
 
